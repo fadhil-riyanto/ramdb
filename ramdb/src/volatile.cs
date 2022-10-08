@@ -13,7 +13,7 @@ namespace ramdb.src
                                 return mem[keytoset];
                         } catch (System.Collections.Generic.KeyNotFoundException)
                         {
-                                throw new ramdb.Except.KeyNotFoundException();
+                                throw new ramdb.Except.KeyNotFoundException("key not found");
                         }
                         
                 }
