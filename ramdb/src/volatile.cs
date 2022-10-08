@@ -1,3 +1,4 @@
+
 namespace ramdb.src
 {
         class volatile_mem
@@ -8,7 +9,13 @@ namespace ramdb.src
                 }
                 public static string get(Dictionary<string, string> mem, string keytoset)
                 {
-                        return mem[keytoset];
+                        try{
+                                return mem[keytoset];
+                        } catch (System.Collections.Generic.KeyNotFoundException)
+                        {
+                                throw new ramdb.Except.KeyNotFoundException();
+                        }
+                        
                 }
         }
 }
