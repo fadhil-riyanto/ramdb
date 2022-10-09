@@ -35,13 +35,6 @@ namespace ramdb.src
 
                 public void WriteFile(string serealized_data)
                 {
-                        // using (var stream = File.Open(this.file, FileMode.Create))
-                        // {
-                        //         using (var writer = new BinaryWriter(stream, System.Text.Encoding.UTF8, false))
-                        //         {
-                        //                 writer.Write(serealized_data);
-                        //         }
-                        // }
                         using (StreamWriter writetext = new StreamWriter(this.file))
                         {
                                 writetext.WriteLine(serealized_data);
