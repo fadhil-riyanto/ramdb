@@ -6,28 +6,22 @@ namespace ramdb.Test
         {
                 public static void Main()
                 {
+                        Console.WriteLine("run");
                         Ramdb rdb = new Ramdb("database.db", "/home/fadhil_riyanto/BALI64/ram-database/ramdb.Test/data");
-                        rdb.setDb(0).set("hai", "ngueeeng");
-                        rdb.setDb(0).set("hai2", "fadhil");
-                        // rdb.setDb(0).set("hai3", "fadhil");
-                        rdb.setDb(3).set("hai4", "fadhil");
-                        // rdb.setDb(3).set("hai5", "fadhil");
-
-                        Console.WriteLine(rdb.setDb(3).get("hai4"));
                         
-                        // try{
-                        //         Console.WriteLine(rdb.setDb(1).get("hai"));
-                        // } catch (ramdb.Except.KeyNotFoundException)
+                        // for(int i = 0; i < 80000; i++)
                         // {
-                        //         Console.WriteLine("err");
+                        //         rdb.setDb(0).set("hai" + i, "ngueeeng").DeleteAfter(60);
                         // }
-
+                        // rdb.setDb(0).set("hai2", "ngueeeng").DeleteAfter(20);
+                        //rdb.setDb(4).set("hai3", "ngueeeng").DeleteAfter(30);
+                        try{
+                                Console.Write(rdb.setDb(0).get("hai63888"));
+                        } catch {
+                                Console.WriteLine("key not found");
+                        }
+                        
                         rdb.commit();
-                        // int[] pp = new int[3];
-                        // pp[1] = 9;
-
-                        // Console.WriteLine(pp[1]);
-
                 }
         }
 }
