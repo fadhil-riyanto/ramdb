@@ -1,0 +1,15 @@
+intro:
+ramdb is memory based ram (redis like) but use flat file.
+
+example:
+example explained in test file (ramdb.Test/)
+
+note:
+1. you must create directory first
+2. for DeleteAfter() method, you must fill it with int second (ie: 30 second, 3600 second for 1 hours. etc)
+3. always use commit() or you will loss your data
+
+
+license: 
+GPL - v2
+Copyright (C) 2022  Fadhil riyanto
